@@ -1,0 +1,37 @@
+*{
+    box-sizing:border-box;
+}
+
+header, footer{
+    width:100%;
+    /*height:20vw;*/
+    background-color: rgba(0, 0, 0, 0.764);
+    text-align: center;
+    color: white;
+}
+
+main{
+    display:flex;
+    flex-direction:row;
+    align-items:stretch;
+}
+.borde{
+    border: 1px solid rgba(0, 0, 0, 0.764);
+}
+
+aside{
+    width:25%;
+    background-image:url(./imag/Captura\ de\ pantalla\ 2025-01-31\ 100223.png);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+
+section{
+    width:75%;
+    background-image:url(https://i.ytimg.com/vi/RRIjBVsGNKg/maxresdefault.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
