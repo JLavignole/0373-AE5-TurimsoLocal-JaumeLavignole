@@ -1,0 +1,24 @@
+header, footer {
+    background-color: #a72020;
+    color: #fff;
+    padding: 10px;
+}
+
+.menu{
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+
+}
+
+.main{
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.noticias{
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
