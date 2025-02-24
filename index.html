@@ -2,45 +2,70 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turismo en Akihabara</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Os Galeguiños</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <heder>
+    <header>
         <h1>Os Galeguiños</h1>
-    </heder>
-    <div class="contenedor"></div>
-    <aside class="menu">Menú</aside>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Gaelaría De Imágenes</a></li>
-            <li><a href="#">Lugares De Interés</a></li>
-            <li><a href="#">Mapa De La Población</a></li>
-            <li><a href="#">Algo mas</a></li>
-        </ul>
-    <div class="main">Contenido Web</div>
-        <ul>
-            <li><a href="1">Galería De Imágenes</a></li>
-                <ul>
-                    <li></li>
-                </ul>
-            <li><a href="2">Lugares De Interés</a></li>
-                <ul>
-                    <li><h3>Islas Cíes</h3>
-                        <p>En la provincia de Pontevedra, frente a la ría de Vigo, se encuentran las maravillosas Islas Cíes. Forman parte del Parque Nacional de las Islas Atlánticas de Galicia, uno de los 16 Parques Nacionales de España. En ellas podrás disfrutar de la naturaleza en su estado más puro y de fantásticos paisajes. Además, en ellas se encuentra la que The Guardian calificó hace unos años como la mejor playa del mundo, Rodas. Son un espacio natural protegido y sus visitas diarias son limitadas, por lo que te recomendamos reservar y comprar tu billete de ferry con antelación para poder disfrutar de ellas. </p>
-                        <a href="./"
-                    </li>
+    </header>
+    <div class="container">
+        <nav class="columna columna-izquierda">
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="#galeria">Galería de Imágenes</a></li>
+                <li><a href="#lugares">Lugares de Interés</a></li>
+                <li><a href="#mapa">Mapa de la Población</a></li>
+                <li><a href="#cultura">Cultura Gallega</a></li>
+            </ul>
+        </nav>
+        <main class="columna columna-central">
+            <section id="galeria">
+                <h2>Galería de Imágenes</h2>
+                <img src="imagen1.jpg" alt="Imagen 1">
+                <img src="imagen2.jpg" alt="Imagen 2">
+                <img src="imagen3.jpg" alt="Imagen 3">
+            </section>
 
-                    <li>Finisterre</li>
+            <section id="lugares">
+                <h2>Lugares de Interés</h2>
+                <div class="ficha">
+                    <h3>Playa de las Catedrales</h3>
+                    <img src="playa_catedrales.jpg" alt="Playa de las Catedrales">
+                    <p>Una impresionante playa con formaciones rocosas únicas situada en la costa de Lugo.</p>
+                    <p><strong>Ubicación:</strong> Ribadeo, Lugo</p>
+                </div>
+                <div class="ficha">
+                    <h3>Torre de Hércules</h3>
+                    <img src="torre_hercules.jpg" alt="Torre de Hércules">
+                    <p>El faro romano más antiguo en funcionamiento, ubicado en la ciudad de A Coruña.</p>
+                    <p><strong>Ubicación:</strong> A Coruña</p>
+                </div>
+            </section>
 
-                    <li>Ourense</li>
-                </ul>
-            <li><a href="3">Mapa De La Población</a></li>
-        </ul>
-    <div class="noticias">Ultimas Noticias</div>
+            <section id="mapa">
+                <h2>Mapa de la Población</h2>
+                <iframe src="https://www.google.com/maps" width="100%" height="300"></iframe>
+            </section>
+
+            <section id="cultura">
+                <h2>Cultura Gallega</h2>
+                <p>Explora las tradiciones, festividades y gastronomía de Galicia, una región rica en historia y cultura.</p>
+            </section>
+        </main>
+
+        <aside class="columna columna-derecha">
+            <h2>Últimas Noticias</h2>
+            <div class="noticias">
+                <p>Evento cultural en Santiago de Compostela este fin de semana.</p>
+                <p>Descubren nuevos restos arqueológicos en Lugo.</p>
+                <p>El Camino de Santiago bate récords de visitantes en verano.</p>
+            </div>
+        </aside>
+    </div>
+
     <footer>
-        <p>Todos los derechos reservados &copy; 2021 Akihabara Turismo</p>
+        <p>Derechos de autor reservados &copy; 2025 Os Galeguiños</p>
     </footer>
 </body>
 </html>
