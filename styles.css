@@ -140,6 +140,44 @@ header {
     border-radius: 5px;
     margin-bottom: 10px;
 }
+.acordeon-item {
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.acordeon-titulo {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.acordeon-titulo:hover {
+    background-color: #2980b9;
+}
+
+.acordeon-contenido {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    transition: max-height 0.3s ease-out;
+    padding: 0 10px;
+}
+
+.acordeon-contenido p {
+    margin: 10px 0;
+}
+
 
 /* Footer (Parte B) */
 footer {
@@ -151,3 +189,83 @@ footer {
     border-radius: 0 0 10px 10px;
 }
 
+/* Responsive para pantallas de menos de 700px */
+@media screen and (max-width: 700px) {
+
+    /* General */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Ajuste del Título */
+    header h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    /* Menú - Convertir a desplegable */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    nav li {
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav li:last-child {
+        border: none;
+    }
+
+    /* Botón para el menú en móviles */
+    .menu-toggle {
+        display: block;
+        background-color: #3498db;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    /* Reorganización de columnas */
+    #contenido-principal {
+        display: block;
+    }
+
+    .columna {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Galería de Imágenes */
+    .grid-imagenes {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid-imagenes img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    /* Slider de Noticias */
+    #ultimas-noticias {
+        order: 3;
+    }
+
+    /* Ajuste del Footer */
+    footer {
+        text-align: center;
+        padding: 15px;
+    }
+}

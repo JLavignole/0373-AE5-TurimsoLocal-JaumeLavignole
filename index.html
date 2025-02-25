@@ -67,19 +67,51 @@
                 <h2>Mapa de la Población</h2>
                 <img src="imag/mapa.png" width="100%" height="300"></img>
             </section>
-
-            <section id="cultura">
+            <section id="cultura-gallega">
                 <h2>Cultura Gallega</h2>
-                <p>Explora las tradiciones, festividades y gastronomía de Galicia, una región rica en historia y cultura.</p>
-            </section>
-        </main>
+                <div class="acordeon">
+                    <div class="acordeon-item">
+                        <button class="acordeon-titulo">Gastronomía</button>
+                        <div class="acordeon-contenido">
+                            <p>El pulpo a la gallega y la empanada son algunos de los platos más representativos de Galicia.</p>
+                            <img src="imag/pulpo.jpg" alt="Pulpo a la Feira">
+                            <img src="imag/empanada.jpg" alt="Empanada Gallega">
 
+                        </div>
+                    </div>
+                    <div class="acordeon-item">
+                        <button class="acordeon-titulo">Tradiciones</button>
+                        <div class="acordeon-contenido">
+                            <p>Las fiestas tradicionales y la música celta son parte fundamental de la cultura gallega.</p>
+                            <img src="imag/fiesta2.jpg" alt="Festividad1">
+                            <img src="imag/fiesta.jpg" alt="Festividad2">
+                        </div>
+                    </div>
+                    <div class="acordeon-item">
+                        <button class="acordeon-titulo">Idioma</button>
+                        <div class="acordeon-contenido">
+                            <p>El gallego es la lengua cooficial junto al castellano, con una rica tradición literaria.</p>
+                            <img src="imag/libro.jpeg" alt="Libro">
+                        </div>
+                    </div>
+                </div>
+            </section>            
+        </main>
         <aside class="columna columna-derecha">
             <h2>Últimas Noticias</h2>
             <div class="noticias">
                 <p>Evento cultural en Santiago de Compostela este fin de semana.</p>
+                <a href="https://www.santiagoturismo.com/axenda-cultural/e:fin-de-semana">
+                    <img src="imag/noti1.webp" alt="Noticia 1" width="100%" height="300">
+                </a>
                 <p>Descubren nuevos restos arqueológicos en Lugo.</p>
+                <a href="https://www.eldebate.com/espana/galicia/20250218/hallazgo-lugo-descubierto-tramo-cloaca-romana-abovedada-siglo-iv_271566.html">
+                    <img src="imag/restos.jpg" alt="Noticia 2" width="100%" height="300">
+                </a>
                 <p>El Camino de Santiago bate récords de visitantes en verano.</p>
+                <a href="https://www.elcorreogallego.es/santiago/2024/09/01/camino-records-80-000-peregrinos-107595838.html">
+                    <img src="imag/camino.jpg" alt="Noticia 1" width="100%" height="300">
+                </a>
             </div>
         </aside>
     </div>
@@ -87,5 +119,38 @@
     <footer>
         <p>Derechos de autor reservados &copy; 2025 Os Galeguiños</p>
     </footer>
+    <script>
+        const titulos = document.querySelectorAll('.acordeon-titulo');
+    
+        titulos.forEach(titulo => {
+            titulo.addEventListener('click', function() {
+                const contenido = this.nextElementSibling;
+    
+                // Cerrar otros acordeones
+                document.querySelectorAll('.acordeon-contenido').forEach(item => {
+                    if (item !== contenido) {
+                        item.style.maxHeight = null;
+                    }
+                });
+    
+                // Abrir el acordeón actual
+                if (contenido.style.maxHeight) {
+                    contenido.style.maxHeight = null;
+                } else {
+                    contenido.style.maxHeight = contenido.scrollHeight + "px";
+                }
+            });
+        });
+    </script> 
+    <script>
+        const menuToggle = document.createElement('div');
+        menuToggle.className = 'menu-toggle';
+        menuToggle.textContent = 'Menú';
+        document.querySelector('nav').insertAdjacentElement('beforebegin', menuToggle);
+    
+        menuToggle.addEventListener('click', () => {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>       
 </body>
 </html>
