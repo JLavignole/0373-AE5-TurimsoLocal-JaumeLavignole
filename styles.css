@@ -37,6 +37,7 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .columna-izquierda h2 {
     margin-bottom: 10px;
     color: #4CAF50;
@@ -188,7 +189,11 @@ footer {
     margin-top: 20px;
     border-radius: 0 0 10px 10px;
 }
-
+@media screen and (min-width: 701px) {
+    .menu-toggle {
+        display: none;
+    }
+}
 /* Responsive para pantallas de menos de 700px */
 @media screen and (max-width: 700px) {
 
@@ -257,9 +262,16 @@ footer {
         width: 100%;
         border-radius: 5px;
     }
+    .container {
+        flex-direction: column;
+    }
 
-    /* Slider de Noticias */
-    #ultimas-noticias {
+    .columna {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .columna-derecha {
         order: 3;
     }
 
